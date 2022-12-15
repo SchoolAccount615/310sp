@@ -7,7 +7,11 @@ df <- read.csv("624_runoff_chemistry.csv")
 
 ## take what we want from this dataframe: the pH and the date the sample was collected.
 
+
+
 ph <- subset(df[c("ph", "runoff_datetime")], ph != c("FALSE", "TRUE", "NA"))
+
+ph == phz
 
 ## split datetime object into 2 columns: date and time
 ph2 <- ph %>% separate(col = runoff_datetime, into = c("date", "time"), 
